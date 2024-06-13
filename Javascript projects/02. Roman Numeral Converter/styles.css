@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    background-color: #ACC8E5;
+    color: #112A46;
+    margin: auto auto auto auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    font-family: Courier, sans serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto 0 auto;
+    border: 2px solid #112A46;
+    width: 300px;
+    padding: 15px;
+  }
+  
+  input {
+    display: block;
+    margin-bottom: 10px;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  button {
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #112A46;
+    color: #ACC8E5;
+  }
+  
+  #output {
+    color: #112A46;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px auto 10px auto;
+  }

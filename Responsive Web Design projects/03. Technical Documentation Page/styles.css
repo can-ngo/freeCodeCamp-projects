@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 10;
+  left: 0;
+  width: 200px;
+  padding: 0;
+}
+
+p, li {
+  font-size: 17;
+  font-weight: 500;
+}
+
+header {
+  font-size: 25px;
+}
+
+section {
+  margin-left: 210px;
+  font-weight: bold;
+}
+
+a {
+  margin-top: -20px;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+a:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 500px){
+  a {
+    color: red;
+  }
+}

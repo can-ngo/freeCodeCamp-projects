@@ -1,0 +1,108 @@
+:root {
+  --nav-color: #36a2f5;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Courier, sans serif;
+}
+
+body {
+  padding-top: 50px;
+  margin: 0;
+}
+
+nav {
+  width: 100vw;
+  height: 50px;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  top: 0;
+  right: 0;  
+  background-color: var(--nav-color);
+  color: white;
+  z-index: 2;
+}
+
+li {
+  list-style-type: none;
+  display: inline-block;
+  width: 100px;
+  height: inherit;
+  text-align: center;
+  line-height: 45px;
+}
+
+li:hover,
+nav a:hover {
+  background-color:white;
+  color: var(--nav-color);
+}
+
+nav a {
+  color: white;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+a,
+a:visited,
+a:link {
+  text-decoration: none;
+}
+
+#welcome-section {  
+  width: 100%;
+  position: relative;
+  height: 50%;
+}
+
+#img {
+  width: 100%;
+  opacity: 80%;
+  z-index: -1;
+}
+
+h1 {
+  position: absolute;
+  width: 250px;
+  top: 20%;
+  left: 50%;
+  color: white;
+}
+
+h4 {
+  position: absolute;
+  width: 250px;
+  top: 25%;
+  left: 55%;
+  color: white;
+}
+
+h2 {
+  text-align: center;
+}
+
+#projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+}
+
+#projects div {
+  text-align: center;
+}
+
+.contact {
+  margin: 50px 0;
+  text-align: center;
+}
+
+@media only screen and (max-width: 786px)
+{
+  
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="./styles.css"/>
+    <title>Survey Form</title>
+  </head>
+
+  <body>
+
+    <h1 id="title">C4nng0 Survey Form</h1>
+
+    <p id="description">Survey about Mr. Can Ngo's performance in Web Design</p>
+
+    <form id="survey-form" method="post">
+      <fieldset>
+        <label id="name-label" for="name">Your Name: <input id="name" type="text" placeholder="Please type your name" required/></label>
+        
+        <label id="email-label" for="email">Your Email: <input id="email" type="email" placeholder="youremail@example.com" required/></label>
+        
+        <label id="number-label" for="point">Give me a point: <input id="number" type="number" min="0" max="100" placeholder="0-100 pts"/></label>
+        
+        <label for="compare-to-you">Compare to your skill: 
+          <select id="dropdown">
+            <option>(select one)</option>
+            <option>better</option>
+            <option>worse</option>
+          </select>
+        </label>
+
+        <legend>Would you like to compete with me?</legend>
+        
+        <label for="compete-yes"><input name="compete" type="radio" checked value="1"/> Yes</label>
+        
+        <label for="compete-no"><input name="compete" type="radio" value="0"/> No</label>
+        
+        <label>How many languages do you learn to code a web?</label>
+        
+        <label for="language"><input id="lang" type="checkbox" value="frontend">HTML, CSS, JavaScript</label>
+        
+        <label for="language"><input id="lang" type="checkbox" value="backend">PHP, MySQL, Apache</label>
+        
+        <label for="language"><input id="lang" type="checkbox" value="libraries">Node.js, React.js</label>
+        
+        <label for="comment">Anything to say to me:
+          <textarea id="comment" rows="5" cols="40" placeholder="you are the best...,"></textarea>
+        </label>
+      </fieldset>
+
+      <input id="submit" type="submit" value="Submit">
+    
+    </form>
+  </body>
+</html>

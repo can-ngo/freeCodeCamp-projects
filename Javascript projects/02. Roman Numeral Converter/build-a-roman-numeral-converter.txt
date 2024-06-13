@@ -1,0 +1,206 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>Roman Numeral Converter</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <h1>ROMAN NUMERAL CONVERTER</h1>
+      <div class="container">
+        <h2>Enter a number:<h2>
+        <input id="number" type="number"></input>
+        <button id="convert-btn">Convert</button>
+      </div>
+      <div id="output">
+      </div>
+    </main>
+    <footer></footer>
+
+    <!-- javascript -->
+    <script src="script.js"></script>
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #ACC8E5;
+  color: #112A46;
+  margin: auto auto auto auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  font-family: Courier, sans serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px auto 0 auto;
+  border: 2px solid #112A46;
+  width: 300px;
+  padding: 15px;
+}
+
+input {
+  display: block;
+  margin-bottom: 10px;
+  height: 30px;
+}
+
+button {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #112A46;
+  color: #ACC8E5;
+}
+
+#output {
+  color: #112A46;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px auto 10px auto;
+}
+
+
+** end of undefined **
+
+** start of undefined **
+
+const input = document.getElementById("number");
+const convertBtn = document.getElementById("convert-btn");
+const output = document.getElementById("output");
+
+const romanObj = {
+  M: 1000, CM: 900,D:500,CD:400,C:100, XC:90,L:50,XL:40,X:10,IX:9,V:5,IV:4,I:1
+}
+
+convertBtn.addEventListener("click",()=>{
+  const inputInt = parseInt(input.value);
+  
+  if (!inputInt) {
+    output.innerText = "Please enter a valid number";
+    return;
+  } else if (inputInt < 0) {
+    output.innerText = "Please enter a number greater than or equal to 1";
+    return;
+  } else if (inputInt >= 4000) {
+    output.innerText = "Please enter a number less than or equal to 3999";
+    return;
+  } else {
+    output.innerText = numToRoman(inputInt);
+  }
+
+
+})
+
+const numToRoman = (num)=>{
+  const thousand = Math.floor(num/1000);
+  const hundred = Math.floor(num/100)-thousand*10;
+  const ten = Math.floor(num/10)-hundred*10-thousand*100;
+  const unit = num-ten*10-hundred*100-thousand*1000;
+  let outputStr = "";
+
+  for (let i = 0; i<thousand;i++)
+    {
+      outputStr += "M"
+    };
+  
+  for (let i=0; i<hundred;i++)
+    {
+      if (hundred === 9) {
+        outputStr += "CM";
+        break;
+      } else if (hundred === 8) {
+        outputStr += "DCCC";
+        break;
+      } else if (hundred === 7) {
+        outputStr += "DCC";
+        break;
+      } else if (hundred === 6) {
+        outputStr += "DC";
+        break;
+      } else if (hundred === 5) { 
+        outputStr += "D";
+        break;
+      } else if (hundred === 4) {
+        outputStr += "CD";
+        break;
+      }
+      outputStr += "C";
+    };
+
+  for (let i=0; i<ten; i++)
+    {
+      if (ten === 9) {
+        outputStr += "XC";
+        break;
+      } else if (ten === 8) {
+        outputStr += "LXXX";
+        break;
+      } else if (ten === 7) {
+        outputStr += "LXX";
+        break;
+      } else if (ten === 6) {
+        outputStr += "LX";
+        break;
+      } else if (ten === 5) {
+        outputStr += "L";
+        break
+      } else if (ten === 4) {
+        outputStr += "XL";
+        break
+      }
+      outputStr += "X"
+    };
+
+  for (let i=0; i<unit; i++)
+    {
+      if (unit === 9) {
+        outputStr += "IX";
+        break;
+      } else if (unit === 8) {
+        outputStr += "VIII";
+        break;
+      } else if (unit === 7) {
+        outputStr += "VII";
+        break;
+      } else if (unit === 6) {
+        outputStr += "VI";
+        break;
+      } else if (unit === 5) {
+        outputStr += "V";
+        break
+      } else if (unit === 4) {
+        outputStr += "IV";
+        break
+      }
+      outputStr += "I";
+    };
+  return outputStr
+}
+
+
+
+** end of undefined **
+

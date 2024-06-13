@@ -1,0 +1,113 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>Palindrome Checker</title>
+  </head>
+  <body>
+    <h1>Palindrome Checker</h1>
+    <h4>Please input your word into following box:</h4>
+    <input type="text" id="text-input" value="fsdf">
+    <button id="check-btn">Check</button>
+    <div id="result"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+:root {
+  --clr-primary: #074016;
+  --clr-text: #f0f0f0;
+}
+
+body {
+  box-sizing: border-box;
+  text-align: center;
+  height: 100vh;
+  background-color: var(--clr-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h4 {
+  color: var(--clr-text);
+  margin: 0 auto 20px auto;
+}
+
+h4 {
+  margin: 0 auto 0 auto;
+}
+
+input {
+  display: block;
+  margin: 10px auto 10px auto;
+}
+
+#result {
+  color: var(--clr-text);
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+@keyframes grow {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 3;
+  }
+}
+
+** end of undefined **
+
+** start of undefined **
+
+const textInput = document.getElementById("text-input");
+const checkBtn = document.getElementById("check-btn");
+const resultDisplay = document.getElementById("result");
+
+//Remove all non-alphanumeric characters
+const cleanInputString = string => string.replace(/[\W_]/g,"");
+
+checkBtn.addEventListener("click", ()=>{
+  const inputValue = cleanInputString(textInput.value);
+  
+  if (!inputValue){
+    alert("Please input a value")
+  } else if (inputValue.length === 1) {
+    resultDisplay.textContent = `${textInput.value} is a palindrome`;
+  } else {
+    checkPalindrome(inputValue.toLowerCase());
+  }
+})
+
+
+function checkPalindrome (string) {
+  const firstHalf = string.slice(0,Math.floor(string.length/2));
+  const lastHalf = string.slice(Math.ceil(string.length/2),string.length);
+  const reverseLastHalf = lastHalf.split("").reverse().join("");
+  console.log(firstHalf, reverseLastHalf);
+  if (firstHalf === reverseLastHalf){
+    resultDisplay.textContent = `${textInput.value} is a palindrome`;
+  } else {
+    resultDisplay.textContent = `${textInput.value} is not a palindrome`;
+  }
+}
+
+checkPalindrome(cleanInputString("0_0 (: /-\ :) 0-0"))
+
+
+
+** end of undefined **
+

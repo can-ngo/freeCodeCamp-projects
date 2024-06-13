@@ -1,0 +1,144 @@
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  margin-top: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  background-color: brown;
+  height: 60px;
+  width: 100%;
+}
+
+.space {
+  height: 50px;
+}
+
+#header-img {
+  width: 50px;
+  position: relative;
+  left: 3vw;
+}
+
+.nav-link {
+  display: inline-block;
+  height: 100%;
+  width: 6em;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  padding: 1.5em 1.5em;
+  right: 5vw;
+}
+
+.nav-link:hover {
+  cursor: pointer;
+  background-color: white;
+  color: brown;
+}
+
+h1 {
+  text-align: center;
+}
+
+form, input {
+  text-align: center;
+  font-size: 18px;
+}
+
+
+#coffee {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+#coffee h2 {
+  padding-top: 50px;
+}
+
+h2 {
+  text-align: center;
+}
+
+
+#tea {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+#icon-2 {
+  grid-row-start: 2;
+}
+
+#icon-3 {
+  grid-row-start: 3;
+}
+
+#pricing {
+  display: grid;
+  grid-template-columns: repeat(3, 20%);
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#price-1 {
+  grid-column-start: 2;
+  border: 1px solid grey;
+}
+
+#price-2 {
+  grid-column-start: 3;
+  border: 1px solid grey;
+}
+
+#price-3 {
+  grid-column-start: 4;
+  border: 1px solid grey;
+}
+
+h4 {
+  text-align: center;
+}
+
+#pricing p {
+  text-align: center;
+}
+
+.price {
+  border: 1px solid black;
+}
+
+.btn-price {
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+  width: 5em;
+}
+
+.btn-price:hover {
+  cursor: pointer;
+  background-color: yellow;
+}
+
+footer {
+  background-color: grey;
+  width: 100%;
+  height: 3rem;
+  align-content: center;
+  margin-top: 2rem;
+  text-align: right;
+}

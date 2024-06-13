@@ -1,0 +1,46 @@
+:root {
+    --clr-primary: #074016;
+    --clr-text: #f0f0f0;
+  }
+  
+  body {
+    box-sizing: border-box;
+    text-align: center;
+    height: 100vh;
+    background-color: var(--clr-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h4 {
+    color: var(--clr-text);
+    margin: 0 auto 20px auto;
+  }
+  
+  h4 {
+    margin: 0 auto 0 auto;
+  }
+  
+  input {
+    display: block;
+    margin: 10px auto 10px auto;
+  }
+  
+  #result {
+    color: var(--clr-text);
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  @keyframes grow {
+    0% {
+      scale: 1;
+    }
+    100% {
+      scale: 3;
+    }
+  }

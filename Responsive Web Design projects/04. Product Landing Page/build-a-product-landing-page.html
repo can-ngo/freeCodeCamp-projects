@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/92f71adf53.js" crossorigin="anonymous"></script>
+    <title>Product Landing Page</title>
+  </head>
+  <body>
+    <header id="header">
+      <img id="header-img" src="https://iili.io/JsyoBQR.png" alt="Logo"/>
+      <nav id="nav-bar">
+          <a href="#coffee" class="nav-link">Coffee</a>
+          <a href="#tea" class="nav-link">Tea</a>
+          <a href="#pricing" class="nav-link">Pricing</a>
+      </nav>
+    </header>
+    
+    <main>
+      <div class="space"></div>
+      <h1>Stay Awake!</h1>
+      
+      <form id="form" method="post" action="https://www.freecodecamp.com/email-submit">
+        <label id="email-label" for="email">Please enter your email: <input type="email" id="email" placeholder="youremail@example.com" name="email"></label>
+        <input id="submit" type="submit" value="Get a Cup!">
+      </form>
+      
+      <section id="coffee">
+        <h2>A Brief History of Coffee:</h2>
+        <video id="video" width="320" height="240" controls>
+          <source src="https://youtu.be/xQ156y4TtJs?si=Ijn0F8qIQqLUGQdC" type="video/mp4">
+        </video>
+
+      </section>
+
+      <h2>Our Tea</h2>
+      <section id="tea">
+        <i id="icon-1" class="fas fa-tint fa-2x"></i>
+        <i id="icon-2" class="fas fa-wine-glass-alt fa-2x"></i>
+        <i id="icon-3" class="fas fa-user-secret fa-2x"></i>
+        <p class="text">After the tea leaves have been plucked, the real production of tea begins. The leaves are first taken to a tea factory to be processed. These factories are usually very close to the tea gardens, so the leaves stay as fresh as possible.</p>
+        <p class="text">The next stage in the production of tea is the sorting process. Before they leave the tea factory, all the teas - black, green, white and Oolong - are graded and sorted.Because different-sized leaves brew at different speeds, the leaves are separated into batches of the same size.</p>
+        <p class="text">Next, the leaves are classified by size, type and appearance. Different countries have their own systems for classifying tea. In China, teas are named by the region they came from, the way they were made and the type of leaf, or the legend behind the tea.</p>
+      </section>
+
+      <section id="pricing">
+        <div class="price price-1">
+          <h4>COFFEE</h4>
+          <p>Lorem ipsum donor</p>
+          <input class="btn-price" type="submit" value="$5">
+        </div>
+        <div class="price price-2">
+          <h4>TEA</h4>
+          <p>Lorem ipsum donor</p>
+          <input class="btn-price" type="submit" value="$3">
+        </div>
+        <div class="price price-3">
+          <h4>SPECIAL</h4>
+          <p>Lorem ipsum donor</p>
+          <input class="btn-price" type="submit" value="$10">
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p><b>contact:</b> nncan99@gmail.com</p>
+    </footer>
+  </body>
+</html>
