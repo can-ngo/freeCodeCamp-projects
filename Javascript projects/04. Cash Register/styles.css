@@ -1,0 +1,135 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --color-machine: #2b6987;
+  --color-background: #423534;
+}
+
+body {
+  margin: 0 auto 0 auto;
+  text-align: center;
+  background-color: var(--color-background);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.input > input,
+.input > button {
+  font-size: 18px;
+}
+
+input {
+  text-align: center;
+}
+
+button {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.cash-machine-container {
+  width: 400px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+}
+
+.screen {
+  width: 200px;
+  height: 40px;
+  border: 6px solid var(--color-machine);
+  margin-left: 20px;
+  background-color: var(--color-machine);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.inner-screen {
+  background-color: black;
+  width: 95%;
+  height: 30px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.neck {
+  width: 50px;
+  height: 40px;
+  margin-left: 50px;
+  background-color: var(--color-machine);
+}
+
+.machine-body-container {
+  width: 100%;
+  height: 300px;
+  border-radius: 25px 25px 0px 0px;
+  background-color: var(--color-machine);
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  padding-top: 25px;
+}
+
+.keyboard{
+  width: 70px;
+  height: 70px;
+  background-color: var(--color-machine);
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.key {
+  width: 20px;
+  height: 20px;
+  background-color:black;
+  border-radius: 2px;
+
+}
+
+.information {
+  width: 250px;
+  height: 250px;
+  background-color: white;
+  color: black;
+  font-size: 18px;
+}
+
+.machine-foot {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  background-color: var(--color-machine);
+}
+
+.handle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: black;
+}

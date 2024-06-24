@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cash Register Project</title>
+  </head>
+  <body>
+  <h1>Cash Register Project</h1>
+  
+  <div class="input">
+    <label name="input" id="input" for="cash">Enter cash from customer:</label>
+    <input type="number" id="cash">
+    <button type="button" id="purchase-btn">Purchase</button>
+    <div class="change-due" id="change-due"></div>
+  </div>
+  <div class="cash-machine-container">
+    <div class="screen">
+      <div class="inner-screen">
+        <span id="price"></span>
+      </div>
+    </div>
+    <div class="neck"></div>
+    <div class="machine-body-container">
+      <div class="keyboard">
+        <div class="key"></div>
+        <div class="key"></div>
+        <div class="key"></div>
+        <div class="key"></div>
+        <div class="key"></div>
+        <div class="key"></div>
+        <div class="key"></div>
+        <div class="key"></div>
+        <div class="key"></div>
+      </div>
+      <div class="information" id="drawer-information">
+        <p style="margin: 7px auto"><b>Change in drawer:</b></p>
+        <p>Hundreds: $ <span class="cid"></span></p>
+        <p>Twenties: $ <span class="cid"></span></p>
+        <p>Tens: $ <span class="cid"></span></p>
+        <p>Fives: $ <span class="cid"></span></p>
+        <p>Ones: $ <span class="cid"></span></p>
+        <p>Quarters: $ <span class="cid"></span></p>
+        <p>Dimes: $ <span class="cid"></span></p>
+        <p>Nickels: $ <span class="cid"></span></p>
+        <p>Pennies: $ <span class="cid"></span></p>        
+      </div>
+    </div>
+    <div class="machine-foot">
+      <div class="handle"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  </body>
+</html>
