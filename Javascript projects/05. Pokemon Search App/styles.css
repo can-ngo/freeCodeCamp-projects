@@ -85,65 +85,79 @@ body {
   color: white;
 }
 
-.grass {
-  background-color: green;
-}
-
-.poison {
-  background-color: purple;
+.normal {
+  background-color: #A8A878;
 }
 
 .fire {
-  background-color: red;
+  background-color: #F08030;
 }
 
 .water{
-  background-color: blue;
+  background-color: #6890F0;
 }
 
-.flying {
-  background-color: white;
+.electric {
+  background-color: #F8D030;
+}
+
+.grass {
+  background-color: #78C850;
+}
+
+.ice {
+  background-color: #98D8D8;
   color: black;
 }
 
 .fighting {
-  background-color: orange;
+  background-color: #C03028;
 }
 
-.electric {
-  background-color: yellow;
-  color: black;
+.poison {
+  background-color: #A040A0;
 }
 
-.bug, .ground {
-  background-color: brown;
+.ground {
+  background-color: #E0C068;
+}
+
+.flying {
+  background-color: #A890F0;
+}
+
+.psychic {
+  background-color: #F85888;
+}
+
+.bug {
+  background-color: #A8B820;
 }
 
 .rock {
-  background-color: grey;
-}
-
-.dark {
-  background-color: black;
+  background-color: #B8A038;
 }
 
 .ghost {
-  background-color: blueviolet;
+  background-color: #705898;
+}
+
+.dragon {
+  background-color: #7038F8;
+}
+
+.dark {
+  background-color: #705848;
 }
 
 .steel {
-  background-color: lightslategray;
+  background-color: #B8B8D0;
 }
 
 .fairy {
-  background-color: aqua;
-  color: black;
+  background-color: #F0B6BC;
 }
 
-.ice {
-  background-color: azure;
-  color: black;
-}
 
 table {
   width: 370px;
