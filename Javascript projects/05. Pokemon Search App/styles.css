@@ -140,6 +140,11 @@ body {
   color: black;
 }
 
+.ice {
+  background-color: azure;
+  color: black;
+}
+
 table {
   width: 370px;
 }
