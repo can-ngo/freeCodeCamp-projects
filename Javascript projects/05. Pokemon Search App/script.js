@@ -18,7 +18,6 @@ const pokeApiProxy = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon";
 let totalPokemon;
 
 
-
 const searchPokemon = () => {
   const searchValue = searchInput.value.toLowerCase();
     
@@ -34,7 +33,6 @@ const searchPokemon = () => {
       let pokemonUrl = "";
       
       pokemonUrl = pokeApiProxy + `/${searchValue}`;
-      console.log(pokemonUrl);
   
       fetchData(pokemonUrl).then(data=>{
       const {base_experience,
@@ -46,49 +44,13 @@ const searchPokemon = () => {
       stats,
       types,
       weight} = data;
-            
-      pokemonName.textContent = name.toUpperCase();
-      pokemonId.textContent = ` #${id}`;
-      pokemonWeight.textContent = `Weight: ${weight} `;
-      pokemonHeight.textContent = `Height: ${height}`;
-      pokemonSprite.src = sprites.front_default;
       
-      let type = [];
-      types.forEach(obj =>{
-        type.push(obj.type.name);
-      });
-
-      pokemonTypes.innerHTML = ``;
-      type.forEach(item => {
-        pokemonTypes.innerHTML += `<span class="types ${item}">${item}</span>`
-      })
-
-
-      let pokemonStats = {};
-      stats.forEach(obj=>{
-        pokemonStats[obj.stat.name] = obj.base_stat;
-      })
-      
-      const {hp,
-      attack,
-      defense,
-      'special-attack': specialAttack,
-      'special-defense': specialDefense,
-      speed
-      } = pokemonStats;
-
-      hpBox.innerText = hp;
-      attackBox.innerText = attack;
-      defenseBox.innerText = defense;
-      specialAttackBox.innerText = specialAttack;
-      specialDefenseBox.innerText = specialDefense;
-      speedBox.innerText = speed;
+      showFullPokemonInfo(name,id,weight,height,types,stats,sprites);
     
       }); 
     }
   })
-  
-  
+   
 }
 
 const randomPokemon = () => {
@@ -98,13 +60,11 @@ const randomPokemon = () => {
     totalPokemon = totalData.count
 
     let randomId = Math.floor(Math.random()*1025);
-    console.log(randomId);
     
       let pokemonUrl = "";
       
       pokemonUrl = pokeApiProxy + `/${randomId}`;
       
-  
       fetchData(pokemonUrl).then(data=>{
       const {base_experience,
       height,
@@ -115,44 +75,9 @@ const randomPokemon = () => {
       stats,
       types,
       weight} = data;
-            
-      pokemonName.textContent = name.toUpperCase();
-      pokemonId.textContent = ` #${id}`;
-      pokemonWeight.textContent = `Weight: ${weight} `;
-      pokemonHeight.textContent = `Height: ${height}`;
-      pokemonSprite.src = sprites.front_default;
       
-      let type = [];
-      types.forEach(obj =>{
-        type.push(obj.type.name);
-      });
-
-      pokemonTypes.innerHTML = ``;
-      type.forEach(item => {
-        pokemonTypes.innerHTML += `<span class="types ${item}">${item}</span>`
-      })
-
-
-      let pokemonStats = {};
-      stats.forEach(obj=>{
-        pokemonStats[obj.stat.name] = obj.base_stat;
-      })
-      
-      const {hp,
-      attack,
-      defense,
-      'special-attack': specialAttack,
-      'special-defense': specialDefense,
-      speed
-      } = pokemonStats;
-
-      hpBox.innerText = hp;
-      attackBox.innerText = attack;
-      defenseBox.innerText = defense;
-      specialAttackBox.innerText = specialAttack;
-      specialDefenseBox.innerText = specialDefense;
-      speedBox.innerText = speed;
-      
+      showFullPokemonInfo(name,id,weight,height,types,stats,sprites);
+        
       }); 
     })
 }
@@ -169,6 +94,44 @@ async function fetchData (url) {
   }
 };
 
+const showFullPokemonInfo = (name,id,weight,height,types,stats,sprites) => {
+  pokemonName.textContent = name.toUpperCase();
+      pokemonId.textContent = ` #${id}`;
+      pokemonWeight.textContent = `Weight: ${weight} `;
+      pokemonHeight.textContent = `Height: ${height}`;
+      pokemonSprite.src = sprites.front_default;
+      
+      let type = [];
+      types.forEach(obj =>{
+        type.push(obj.type.name);
+      });
+
+      pokemonTypes.innerHTML = ``;
+      type.forEach(item => {
+        pokemonTypes.innerHTML += `<span class="types ${item}">${item}</span>`
+      })
+
+
+      let pokemonStats = {};
+      stats.forEach(obj=>{
+        pokemonStats[obj.stat.name] = obj.base_stat;
+      })
+      
+      const {hp,
+      attack,
+      defense,
+      'special-attack': specialAttack,
+      'special-defense': specialDefense,
+      speed
+      } = pokemonStats;
+
+      hpBox.innerText = hp;
+      attackBox.innerText = attack;
+      defenseBox.innerText = defense;
+      specialAttackBox.innerText = specialAttack;
+      specialDefenseBox.innerText = specialDefense;
+      speedBox.innerText = speed;
+}
 
 searchBtn.addEventListener("click",searchPokemon);
 
