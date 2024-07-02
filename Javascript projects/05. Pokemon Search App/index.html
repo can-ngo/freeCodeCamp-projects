@@ -3,7 +3,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-
     <title>Pokemon Search App</title>
   </head>
   <body>
@@ -13,9 +12,10 @@
     <main>
       <div class="container">
         <div class="search-container">
-          <label for="search-input" name="input">Search for Pokemon Name or ID:</label>
-          <input type="text" id="search-input" required>
+          <p>Search for Pokemon Name or ID:</p>
+          <input type="text" id="search-input" required><br>
           <button id="search-button" type="submit">Search</button>
+          <button id="random-button" type="submit">Random</button>
         </div>
         <div id="pokemon-container">
           <div id="pokemon-info">
@@ -61,6 +61,6 @@
     </main>
     <footer></footer>
     <!-- javascript -->
-    <script src="script.js"></script>
+    <script src="script.js"></script>  
   </body>
 </html>
