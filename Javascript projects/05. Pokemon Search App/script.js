@@ -15,7 +15,13 @@ const specialAttackBox = document.getElementById("special-attack");
 const specialDefenseBox = document.getElementById("special-defense");
 const speedBox = document.getElementById("speed"); 
 const pokeApiProxy = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon";
+const pokeApi = "https://pokeapi.co/api/v2/pokemon";
 let totalPokemon;
+//Because pokemon id lies between 2 range [1-1025] and [10001-10277]
+const arrOne = Array(1025).fill().map((_,i)=> i + 1);
+const arrTwo = Array(277).fill().map((_,i)=>i + 1 + 10000);
+const totalPokemonIdArray = arrOne.concat(arrTwo);
+
 
 
 const searchPokemon = () => {
@@ -24,7 +30,7 @@ const searchPokemon = () => {
   fetchData(pokeApiProxy).then(totalData => {
     totalPokemon = totalData.count
 
-  if(!searchValue || Number(searchValue)>totalPokemon){    
+  if(!searchValue){    
     alert("Pokemon not found");
     return
   } 
@@ -57,9 +63,10 @@ const randomPokemon = () => {
   
 
   fetchData(pokeApiProxy).then(totalData => {
-    totalPokemon = totalData.count
-
-    let randomId = Math.floor(Math.random()*1025);
+    
+    let randomIndex = Math.floor(Math.random()*totalPokemonIdArray.length);
+    
+    let randomId = totalPokemonIdArray[randomIndex];
     
       let pokemonUrl = "";
       
@@ -99,7 +106,8 @@ const showFullPokemonInfo = (name,id,weight,height,types,stats,sprites) => {
       pokemonId.textContent = ` #${id}`;
       pokemonWeight.textContent = `Weight: ${weight} `;
       pokemonHeight.textContent = `Height: ${height}`;
-      pokemonSprite.src = sprites.front_default;
+      // pokemonSprite.src = sprites.front_default;
+      pokemonSprite.src = `./showdown/${id}.gif`;
       
       let type = [];
       types.forEach(obj =>{

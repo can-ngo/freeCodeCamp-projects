@@ -57,21 +57,21 @@ body {
   background-color: #ccdadb;
   display: flex;
   flex-direction: column;
-}
-
-#pokemon-info {
-  flex: 1;
+  justify-content: space-between;
+  gap: 5px;
 }
 
 #pokemon-name {
   font-weight: bold;
 }
 
+#pokemon-info {
+  padding: 5px 0 0 5px;
+}
+
 #sprite {
-  height: 80%;
-  width: auto;
-  display: block;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
+  scale: 1.5;
 }
 
 #types {
